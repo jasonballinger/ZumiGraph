@@ -22,7 +22,13 @@ class MyTestCase(unittest.TestCase):
             print("start==",e.get_startNode_name() , end='')
             print("   ~~  end==",e.get_endNode_name())
 
+    def test_print_edges_of_node_x(self):
+        graphObject = Graph()
+        graphObject.create_simple()
+        nodes = graphObject.nodes_dict
 
+        edges = graphObject.nodes_dict['s'].edges
+        self.assertEqual(3, len(edges)
 
 if __name__ == '__main__':
     unittest.main()
